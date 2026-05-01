@@ -8,6 +8,15 @@ End-to-end data pipeline that ingests federal procurement data from the SAM.gov 
 
 This project pulls live procurement records from the U.S. federal government's SAM.gov API, loads them into a local PostgreSQL database, and exposes the data through a Tableau dashboard designed for procurement market research. The goal is to make it easy to spot which agencies are actively spending in which categories, where procurement opportunities are concentrated, and how spending patterns shift over time.
 
+# Key Findings
+
+The dashboard surfaces four main patterns in federal contract opportunity data:
+
+- Agency activity is concentrated. A relatively small set of federal agencies post the majority of contract opportunities captured in the dataset, while many others post infrequently. This concentration matters for vendors trying to prioritize where to focus their business development efforts, since chasing every agency is rarely realistic.
+- Contract types follow predictable patterns. Visualizing the breakdown by contract type reveals which procurement vehicles agencies rely on most often, including the balance between competitive solicitations and other award types. Understanding this mix helps vendors calibrate which kinds of opportunities they are most likely to encounter.
+- Posting volume varies meaningfully across the year. The data shows clear seasonality in when agencies post new opportunities, with certain months consistently busier than others. This pattern reflects the federal budget cycle and gives vendors useful context for when to expect peaks and troughs in solicitation activity.
+- Response deadlines cluster around specific dates. Mapping due dates against posting dates shows how much lead time vendors typically receive, and how many opportunities cluster around the same response windows. This visibility into the deadline distribution is useful for capacity planning, especially for smaller vendors with limited bid resources.
+
 ## Tech Stack
 
 - **Python** (pandas, requests, psycopg2) for ingestion and transformation
