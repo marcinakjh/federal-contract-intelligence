@@ -18,9 +18,12 @@ The dashboard surfaces four main patterns in federal contract opportunity data:
 - Response deadlines cluster around specific dates. Mapping due dates against posting dates shows how much lead time vendors typically receive, and how many opportunities cluster around the same response windows. This visibility into the deadline distribution is useful for capacity planning, especially for smaller vendors with limited bid resources.
 
 ## How to Run
-1. Configure your .env file using .env.example as a template.
-2. Run python ingest.py to pull records from SAM.gov and load them into PostgreSQL. Repeat with different date ranges as needed to build up the dataset.
-3. Run python export.py whenever you need a current snapshot of the database in CSV form for Tableau.
+1. Configure your `.env` file using `.env.example` as a template.
+2. Run `python ingest.py` to pull records from SAM.gov and load them into PostgreSQL. Repeat with different date ranges as needed to build up the dataset.
+3. Run `python export.py` to produce a current snapshot of the database in `contracts.csv` for use by Tableau.
+4. Open the Tableau workbook to view the dashboard, which reads from `contracts.csv`.
+
+The four SQL files in this repository (`query1.sql` through `query4.sql`) run against the PostgreSQL database for exploratory analysis and to validate the patterns surfaced in the dashboard.
 
 ## Tech Stack
 
