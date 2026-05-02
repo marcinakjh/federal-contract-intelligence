@@ -8,7 +8,7 @@ End-to-end data pipeline that ingests federal procurement data from the SAM.gov 
 
 This project pulls live procurement records from the U.S. federal government's SAM.gov API, loads them into a local PostgreSQL database, and exposes the data through a Tableau dashboard designed for procurement market research. The goal is to make it easy to spot which agencies are actively spending in which categories, where procurement opportunities are concentrated, and how spending patterns shift over time.
 
-# Key Findings
+## Key Findings
 
 The dashboard surfaces four main patterns in federal contract opportunity data:
 
@@ -16,6 +16,11 @@ The dashboard surfaces four main patterns in federal contract opportunity data:
 - Contract types follow predictable patterns. Visualizing the breakdown by contract type reveals which procurement vehicles agencies rely on most often, including the balance between competitive solicitations and other award types. Understanding this mix helps vendors calibrate which kinds of opportunities they are most likely to encounter.
 - Posting volume peaks at the federal fiscal year-end. Contract postings rise sharply from July through September, then drop in October. This pattern reflects the federal "use it or lose it" budget cycle: agencies must obligate appropriated funds by the September 30 fiscal year-end or return them to the Treasury, which creates strong incentive to push procurement activity into the final quarter. Vendors aware of this seasonality can plan capacity accordingly, expecting a surge of opportunities in late summer and a quieter October.
 - Response deadlines cluster around specific dates. Mapping due dates against posting dates shows how much lead time vendors typically receive, and how many opportunities cluster around the same response windows. This visibility into the deadline distribution is useful for capacity planning, especially for smaller vendors with limited bid resources.
+
+## How to Run
+1. Configure your .env file using .env.example as a template.
+2. Run python ingest.py to pull records from SAM.gov and load them into PostgreSQL. Repeat with different date ranges as needed to build up the dataset.
+3. Run python export.py whenever you need a current snapshot of the database in CSV form for Tableau.
 
 ## Tech Stack
 
