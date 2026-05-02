@@ -12,7 +12,7 @@
 -- Used in: Dashboard panel showing agency activity concentration.
 -- ============================================================
 
-SELECT fullParentPathName, COUNT(*) as contract_count
+SELECT fullParentPathName, COUNT(*) AS contract_count
 FROM contracts
 GROUP BY fullParentPathName
-ORDER BY contract_count desc;
+ORDER BY contract_count DESC;
