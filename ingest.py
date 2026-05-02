@@ -47,7 +47,7 @@ params = {
 # no more results. Includes a 1-second delay between requests
 # to respect SAM.gov rate limits.
 
-while len(all_contracts) < 2000:
+while len(all_contracts) < 2000: # Per-run cap; full dataset built across multiple ingestion runs
     params["offset"] = offset
     response = requests.get(url, params=params)
     if "opportunitiesData" not in response.json():
