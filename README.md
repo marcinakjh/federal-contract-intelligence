@@ -103,7 +103,7 @@ Export the data for Tableau:
 
 ## Project Structure
 
-'''
+```
 federal-contract-intelligence/
 ├── ingest.py                                       # Pulls data from SAM.gov API and loads into PostgreSQL
 ├── export.py                                       # Snapshots PostgreSQL contracts table to CSV for Tableau
@@ -118,7 +118,7 @@ federal-contract-intelligence/
 ├── screenshots/
 │   └── dashboard.png
 └── README.md
-'''
+```
 
 ## Author
 
