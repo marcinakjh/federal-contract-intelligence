@@ -1,10 +1,25 @@
-SAM.gov API
-     ↓ (ingest.py)
-PostgreSQL "contracts" table
-     ↓ (export.py)
-contracts.csv
-     ↓
-Tableau Dashboard
+```
++-----------------+
+|  SAM.gov API    |
++-----------------+
+        |
+        v   (ingest.py)
++-----------------+
+|   PostgreSQL    |
+| contracts table |
++-----------------+
+        |
+        v   (export.py)
++-----------------+
+|  contracts.csv  |
++-----------------+
+        |
+        v
++-----------------+
+| Tableau         |
+| Dashboard       |
++-----------------+
+```
 
 # Federal Contract Intelligence Dashboard
 
