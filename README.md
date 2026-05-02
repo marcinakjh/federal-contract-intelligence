@@ -1,3 +1,11 @@
+SAM.gov API
+     ↓ (ingest.py)
+PostgreSQL "contracts" table
+     ↓ (export.py)
+contracts.csv
+     ↓
+Tableau Dashboard
+
 # Federal Contract Intelligence Dashboard
 
 End-to-end data pipeline that ingests federal procurement data from the SAM.gov API into PostgreSQL and surfaces agency spending trends and procurement opportunities through an interactive Tableau Public dashboard.
