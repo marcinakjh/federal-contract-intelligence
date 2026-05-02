@@ -104,10 +104,15 @@ Export the data for Tableau:
 ## Project Structure
 
 federal-contract-intelligence/
-├── ingest.py              # Pulls data from SAM.gov into Postgres
-├── export.py              # Queries Postgres for Tableau consumption
-├── requirements.txt       # Python dependencies
-├── .env.example           # Template for local credentials
+├── ingest.py                                       # Pulls data from SAM.gov API and loads into PostgreSQL
+├── export.py                                       # Snapshots PostgreSQL contracts table to CSV for Tableau
+├── query1_agency_volume.sql                        # Contract volume by federal agency
+├── query2_contract_types_breakdown.sql             # Contract volume by type
+├── query3_posting_trends_over_time.sql             # Posting volume by month (seasonality)
+├── query4_response_deadline_urgency.sql            # Upcoming response deadlines
+├── contracts.csv                                   # Generated dashboard data feed
+├── requirements.txt                                # Python dependencies
+├── .env.example                                    # Template for local credentials
 ├── .gitignore
 ├── screenshots/
 │   └── dashboard.png
